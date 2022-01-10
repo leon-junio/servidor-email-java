@@ -33,8 +33,8 @@ public class JavaMailApp {
 
     public boolean enviarEmail() {
         try {
-            user = "leonsdevnoreply@gmail.com";
-            pass = "Printf(*246846*)";
+            user = "teste@gmail.com";
+            pass = "teste";
             host = "smtp.gmail.com";
             props = new Properties();
             props.put("mail.smtp.user", user);
@@ -50,14 +50,14 @@ public class JavaMailApp {
                     new javax.mail.Authenticator() {
                 @Override
                 protected PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication("leonsdevnoreply@gmail.com",
+                    return new PasswordAuthentication("teste@gmail.com",
                             "Printf(*246846*)");
                 }
             });
             session.setDebug(false);
             try {
                 message = new MimeMessage(session);
-                message.setFrom(new InternetAddress("leonsdevnoreply@gmail.com"));
+                message.setFrom(new InternetAddress("teste@gmail.com"));
                 toUser = InternetAddress.parse(destinatario);
                 message.setRecipients(Message.RecipientType.TO, toUser);
                 message.setSubject(assunto);
