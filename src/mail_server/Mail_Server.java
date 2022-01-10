@@ -1,13 +1,6 @@
 package mail_server;
 
-import classes.Funcionario;
-import classes.SecureDate;
-import classes.Solicitacao;
-import classes.Suporte;
 import dao.Conexao;
-import dao.DAOFuncionario;
-import dao.DAOSolicitacao;
-import dao.DAOSuporte;
 import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
@@ -19,8 +12,6 @@ import utilidades.JavaMailApp;
 
 public class Mail_Server implements Serializable {
 
-    private static final DAOSolicitacao daos = new DAOSolicitacao();
-    private static final DAOSuporte daosp = new DAOSuporte();
     private static final SecureDate scd = new SecureDate();
     private static boolean checker = true;
     private static String limite = "";
