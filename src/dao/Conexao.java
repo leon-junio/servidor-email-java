@@ -19,8 +19,8 @@ import java.sql.SQLException;
 public class Conexao {
 
     private static final SecureDate sd = new SecureDate();
-    private static final String user = "LEONDEV";
-    private static final String senha = "gXNz5eueWaOhVHQy";
+    private static final String user = "root";
+    private static final String senha = "";
     private static final String driver = "com.mysql.jdbc.Driver";
     private static Connection conexao = null;
 
@@ -53,7 +53,7 @@ public class Conexao {
         if (conexao == null) {
             try {
                 Class.forName(driver);
-                conexao = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3323/almoxarifado_cap", user, senha);
+                conexao = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:2212/testBD", user, senha);
             } catch (ClassNotFoundException ex) {
                 System.out.println("Erro de conexão por falta de classe " + ex.getMessage());
             } catch (SQLException ex) {
