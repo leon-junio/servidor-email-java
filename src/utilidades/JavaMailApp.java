@@ -86,14 +86,14 @@ public class JavaMailApp {
             htmlEmail.setHtmlMsg(txt);
             htmlEmail.addTo(destinatario);
             htmlEmail.setSubject(assunto);
-            htmlEmail.setFrom("leonsdevnoreply@gmail.com");
+            htmlEmail.setFrom("teste@gmail.com");
             htmlEmail.setHostName("smtp.gmail.com");
             htmlEmail.setSSLOnConnect(true);
             htmlEmail.setSmtpPort(465);
-            htmlEmail.setAuthentication("leonsdevnoreply@gmail.com", "Printf(*246846*)");
+            htmlEmail.setAuthentication("teste@gmail.com", "teste");
             htmlEmail.setSslSmtpPort("465");
             htmlEmail.setSSLCheckServerIdentity(true);
-            htmlEmail.setAuthenticator(new DefaultAuthenticator("leonsdevnoreply@gmail.com", "Printf(*246846*)"));
+            htmlEmail.setAuthenticator(new DefaultAuthenticator("teste@gmail.com", "teste"));
             htmlEmail.send();
         } catch (Exception e) {
             e.printStackTrace();
